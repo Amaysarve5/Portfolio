@@ -32,7 +32,7 @@ import spsLogo1 from './assets/education_logo/sps_logo1.png';
 // Project Section Logo's
 import passop from './assets/work_logo/passop.png';
 import modera from './assets/work_logo/e-commerce.png';
-import spotify from './assets/work_logo/spotify_img.png';
+import spotify from './assets/work_logo/Spotify_img.png';
 import stonepaper from './assets/work_logo/stone_paper_game.png';
 import taskapp from './assets/work_logo/todo_app.png';
 import twitter from './assets/work_logo/Twitter.png';
