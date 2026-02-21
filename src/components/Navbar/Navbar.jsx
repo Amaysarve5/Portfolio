@@ -39,28 +39,35 @@ const Navbar = () => {
 
   return (
     <nav
+      aria-label="Main navigation"
       className={`fixed top-0 w-full z-50 transition duration-300 px-[7vw] md:px-[7vw] lg:px-[20vw] ${
         isScrolled ? "bg-[#050414] bg-opacity-50 backdrop-blur-md shadow-md" : "bg-transparent"
-      }`}
+      } animate-fadeInUp`}
     >
-      <div className="text-white py-5 flex justify-between items-center">
+      <div className="py-5 flex justify-between items-center text-body">
         {/* Logo */}
-        <div className="text-lg font-semibold cursor-pointer">
-          <span className="text-[#8245ec]">&lt;</span>
-          <span className="text-white">Amay</span>
-          <span className="text-[#8245ec]">/</span>
-          <span className="text-white">Sarve</span>
-          <span className="text-[#8245ec]">&gt;</span>
-        </div>
+          <a
+          href="#about"
+          onClick={() => handleMenuItemClick('about')}
+          className="text-lg font-semibold cursor-pointer flex items-center space-x-2"
+          aria-label="Homepage"
+        >
+          <span className="text-accent">&lt;</span>
+          <span className="text-heading">Amay</span>
+          <span className="text-accent">/</span>
+          <span className="text-heading">Sarve</span>
+          <span className="text-accent">&gt;</span>
+        </a>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-8 text-gray-300">
+        <ul className="hidden md:flex space-x-8 text-body">
           {menuItems.map((item) => (
             <li
               key={item.id}
-              className={`cursor-pointer hover:text-[#8245ec] ${
-                activeSection === item.id ? "text-[#8245ec]" : ""
-              }`}
+              className={`cursor-pointer hover:text-accent ${
+                activeSection === item.id ? "text-accent" : ""
+              } transition transform hover:-translate-y-0.5`}
+              aria-label={item.label}
             >
               <button onClick={() => handleMenuItemClick(item.id)}>
                 {item.label}
@@ -75,7 +82,7 @@ const Navbar = () => {
             href="https://github.com/Amaysarve5"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-300 hover:text-[#8245ec]"
+            className="text-body hover:text-accent"
           >
             <FaGithub size={24} />
           </a>
@@ -83,7 +90,7 @@ const Navbar = () => {
             href="https://linkedin.com/in/amay-sarve-72b1b9292"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-300 hover:text-[#8245ec]"
+            className="text-body hover:text-accent"
           >
             <FaLinkedin size={24} />
           </a>
@@ -93,12 +100,12 @@ const Navbar = () => {
         <div className="md:hidden">
           {isOpen ? (
             <FiX
-              className="text-3xl text-[#8245ec] cursor-pointer"
+              className="text-3xl text-accent cursor-pointer"
               onClick={() => setIsOpen(false)}
             />
           ) : (
             <FiMenu
-              className="text-3xl text-[#8245ec] cursor-pointer"
+              className="text-3xl text-accent cursor-pointer"
               onClick={() => setIsOpen(true)}
             />
           )}
@@ -108,12 +115,12 @@ const Navbar = () => {
       {/* Mobile Menu Items */}
       {isOpen && (
         <div className="absolute top-16 left-1/2 transform -translate-x-1/2 w-4/5 bg-[#050414] bg-opacity-50 backdrop-filter backdrop-blur-lg z-50 rounded-lg shadow-lg md:hidden">
-          <ul className="flex flex-col items-center space-y-4 py-4 text-gray-300">
+          <ul className="flex flex-col items-center space-y-4 py-4 text-body">
             {menuItems.map((item) => (
               <li
                 key={item.id}
                 className={`cursor-pointer hover:text-white ${
-                  activeSection === item.id ? "text-[#8245ec]" : ""
+                  activeSection === item.id ? "text-accent" : ""
                 }`}
               >
                 <button onClick={() => handleMenuItemClick(item.id)}>
@@ -126,15 +133,15 @@ const Navbar = () => {
                 href="https://github.com/Amaysarve5"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-300 hover:text-white"
+                className="text-body hover:text-white"
               >
                 <FaGithub size={24} />
               </a>
               <a
-                href="www.linkedin.com/in/amay-sarve-72b1b9292"
+                href="https://www.linkedin.com/in/amay-sarve-72b1b9292"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-300 hover:text-white"
+                className="text-body hover:text-white"
               >
                 <FaLinkedin size={24} />
               </a>

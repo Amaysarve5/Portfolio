@@ -32,12 +32,12 @@ import spsLogo1 from './assets/education_logo/sps_logo1.png';
 // Project Section Logo's
 import passop from './assets/work_logo/passop.png';
 import modera from './assets/work_logo/e-commerce.png';
-import spotify from './assets/work_logo/spotify_img.png';
-import stonepaper from './assets/work_logo/stone_paper_game.png';
+import spotify from './assets/work_logo/spotify.png';
 import taskapp from './assets/work_logo/todo_app.png';
 import twitter from './assets/work_logo/Twitter.png';
-import tictactoe from './assets/work_logo/tic_tac_toe.png';
-import NewsAggrigator from './assets/work_logo/NewsAggrigator.png'
+import NewsAggrigator from './assets/work_logo/news_aggrigator.png';
+import deepfake from './assets/work_logo/deepfake.png'
+
 
 export const SkillsInfo = [
   {
@@ -108,6 +108,16 @@ export const SkillsInfo = [
   export const projects = [
     {
       id: 0,
+      title: "DeepFake AI Power-Detector",
+      description:
+        "Developed an AI-powered deepfake detection web application that allows users to upload videos or share URLs for real-time authenticity analysis, leveraging a Python ML model trained on Kaggle datasets, with a secure full-stack architecture built using React, Tailwind CSS, Node.js, Express, and MongoDB.",
+      image: deepfake,
+      tags: ["React JS", "Node.js", "Express","JavaScript","Tailwind Css","MongoDB","Python","Tensor Flow","Numpy"],
+      github: "https://github.com/Amaysarve5/Deepfake-detector",
+      webapp: "https://github.com/Amaysarve5/Deepfake-detector",
+    },
+    {
+      id: 1,
       title: "News Aggregator Web Application",
       description:
         "A full-stack news aggregator that displays real-time news using NewsAPI. Built with React and Tailwind CSS for a responsive UI, and Node.js with Express for secure API handling. Supports category-wise filtering and dynamic content rendering.",
@@ -117,7 +127,7 @@ export const SkillsInfo = [
       webapp: "https://news-aggrigator-mrv6.onrender.com/",
     },
     {
-      id: 1,
+      id: 2,
       title: "PassOp – Password Manager",
       description:
         "PassOp is a full-stack password manager application with a React + Vite + TailwindCSS frontend and a Node.js + Express + MongoDB backend.",
@@ -127,7 +137,7 @@ export const SkillsInfo = [
       webapp: "https://github.com/Amaysarve5/Password-Manager.git",
     },
     {
-      id: 2,
+      id: 3,
       title: "MODERA",
       description:
         "Modera is a fully responsive e-commerce web application designed for clothing sales. Built with the MERN (MongoDB, Express.js, React, Node.js) stack, Modera offers a clean user experience with features such as product browsing, category filtering, cart management, admin panel, and secure authentication.",
@@ -137,7 +147,7 @@ export const SkillsInfo = [
       webapp: "https://modera.onrender.com/",
     },
     {
-      id: 3,
+      id: 4,
       title: "Twitter UI Clone",
       description:
         "UI of X (formerly Twitter) using HTML and Tailwind CSS. Built with a focus on clean, responsive design, this project helps sharpen UI development skills while closely mimicking a modern social media interface.",
@@ -147,7 +157,7 @@ export const SkillsInfo = [
       webapp: "https://twitter-clone-01.netlify.app/",
     },
     {
-      id: 4,
+      id: 5,
       title: "iTask",
       description:
         "A sleek and efficient to-do list app built with Vite + React to enhance task management and boost productivity.",
@@ -157,7 +167,7 @@ export const SkillsInfo = [
       webapp: "https://todo-list-app-zeta-flax.vercel.app/",
     },
     {
-      id: 5,
+      id: 6,
       title: "Spotify UI Clone",
       description:
         "The Spotify Clone UI is a front-end project that replicates the look and feel of Spotify. This UI includes essential components like the homepage, music player, playlists, and a responsive design.",

@@ -6,6 +6,13 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+        primary: '#00f0ff',
+        accent: '#2EA6FF',
+        heading: '#E6F7FF',
+        body: '#CBD6E0',
+        muted: '#9AA6B2'
+      },
       keyframes: {
         blob: {
           '0%': { transform: 'scale(1)' },

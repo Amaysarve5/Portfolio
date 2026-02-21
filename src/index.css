@@ -9,6 +9,36 @@ html{
     scroll-behavior: smooth;
 }
 
+body {
+    background-color: #050414;
+}
+
+:root{
+    --color-primary: #00f0ff;
+    --color-accent: #2EA6FF;
+    --color-heading: #E6F7FF;
+    --color-body: #CBD6E0;
+    --color-muted: #9AA6B2;
+}
+
+/* Global typography */
+body{
+    color: var(--color-body);
+}
+
+h1,h2,h3,h4{
+    color: var(--color-heading);
+}
+
+a{ color: var(--color-primary); }
+a:hover{ color: var(--color-accent); }
+
+/* Primary button style fallback for non-tailwind elements */
+.btn-primary{
+    background: linear-gradient(90deg,var(--color-primary),var(--color-accent));
+    color: #01040a;
+}
+
 @layer utilities{
     .clip-path-custom{
         clip-path: polygon(0 0,100% 0,98% 75% 95%, 0 100%);
@@ -16,5 +46,34 @@ html{
     .clip-path-custom-3 {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
+        /* Entrance animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(18px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fadeInUp { animation: fadeInUp 600ms cubic-bezier(.2,.9,.3,1) both; }
+
+        /* Subtle floating effect for profile image */
+        @keyframes floatY {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+            100% { transform: translateY(0); }
+        }
+        .animate-floatY { animation: floatY 4s ease-in-out infinite; }
+
+        /* Soft shimmer for call-to-action */
+        @keyframes shine {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        .bg-shimmer {
+            background-image: linear-gradient(90deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.18) 50%, rgba(255,255,255,0.06) 100%);
+            background-size: 200% 100%;
+            animation: shine 3s linear infinite;
+            -webkit-background-clip: padding-box;
+        }
+
+        /* Card entrance with subtle lift */
+        .card-entrance { transform-origin: center; animation: fadeInUp 600ms cubic-bezier(.2,.9,.3,1) both; }
 
 }

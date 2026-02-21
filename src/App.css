@@ -1,0 +1,72 @@
+:root{
+  --bg: #050414;
+  --surface: #0b1020;
+  --muted: #9aa4b2;
+  --accent: #2EA6FF;
+  --accent-2: #00A8FF;
+  --glass: rgba(255,255,255,0.04);
+  --container-padding: 7vw;
+  --max-width: 1200px;
+}
+
+html,body,#root{height:100%;}
+body{
+  background: var(--bg);
+  color: #e6eef8;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* Layout helpers */
+.container{
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+.section{
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* Buttons */
+.btn-primary{
+  display:inline-block;
+  color: white;
+  background: linear-gradient(90deg,var(--accent),var(--accent-2));
+  padding: 0.75rem 1.25rem;
+  border-radius: 9999px;
+  font-weight:700;
+  box-shadow: 0 6px 18px rgba(130,69,236,0.18);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.btn-primary:hover{ transform: translateY(-3px); box-shadow: 0 10px 30px rgba(46,166,255,0.22); }
+
+/* AI-themed blue glow effect */
+.ai-glow {
+  box-shadow: 0 0 20px rgba(46,166,255,0.25), inset 0 0 10px rgba(46,166,255,0.1);
+}
+
+/* Section headings */
+.section-title{ font-size: 1.75rem; font-weight:700; color: #fff; }
+.section-sub{ color: var(--muted); margin-top:0.5rem }
+
+/* Card */
+.card{
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius: 1rem;
+  padding: 1rem;
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+/* Utility for subtle glass overlay used in some sections */
+.glass{
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.03);
+  backdrop-filter: blur(6px);
+}
+
+/* Global transition */
+*{ transition: background-color .18s ease, color .18s ease, border-color .18s ease; }

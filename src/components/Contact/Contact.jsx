@@ -54,58 +54,74 @@ const Contact = () => {
         className="flex flex-col items-center justify-center py-24 px-[12vw] md:px-[7vw] lg:px-[20vw]"
       >
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white">Contact</h2>
-          <div className="w-32 h-1 bg-purple-500 mx-auto mt-4"></div>
-          <p className="text-gray-400 mt-4 text-lg font-semibold">
-            I'd love to hear you — reach out for any opportunities or questions!
+          <h2 className="text-4xl font-bold text-heading">Contact</h2>
+          <div className="w-32 h-1 bg-accent mx-auto mt-4 rounded-sm"></div>
+          <p className="text-muted mt-4 text-lg font-semibold">
+            I'd love to hear from you — reach out for any opportunities or questions!
           </p>
         </div>
 
         {/* contact form */}
-        <div className="mt-8 w-full max-w-md bg-[#0d081f] p-6 rounded-lg shadow-lg border border-gray-700 mx-auto">
-          <h3 className="text-xl font-semibold text-white text-center">
+        <div className="mt-8 w-full max-w-md bg-gray-900/80 p-8 rounded-2xl shadow-xl border border-gray-700/50 mx-auto" style={{ boxShadow: '0 0 30px rgba(46,166,255,0.1)' }}>
+          <h3 className="text-2xl font-semibold text-heading text-center">
             Connect With Me
           </h3>
 
           <form
             ref={form}
             onSubmit={sendEmail}
-            className="mt-4 flex flex-col space-y-4"
+            className="mt-6 flex flex-col space-y-4"
           >
-            <input
-              type="email"
-              name="user_email"
-              placeholder="Your Email"
-              required
-              className="w-full p-3 rounded-md bg-[#131035] text-white border-gray-600 focus:outline-none focus:border-purple-500"
-            />
-            <input
-              type="text"
-              name="user_name"
-              placeholder="Your Name"
-              required
-              className="w-full p-3 rounded-md bg-[#131035] text-white border-gray-600 focus:outline-none focus:border-purple-500"
-            />
-            <input
-              type="text"
-              name="subject"
-              placeholder="Subject"
-              required
-              className="w-full p-3 rounded-md bg-[#131035] text-white border-gray-600 focus:outline-none focus:border-purple-500"
-            />
-            <textarea
-              name="message"
-              placeholder="Message"
-              rows="4"
-              className="w-full p-3 rounded-md bg-[#131035] text-white border-gray-600 focus:outline-none focus:border-purple-500"
-            ></textarea>
+            <div>
+              <label className="text-body text-sm font-medium block mb-2">Email</label>
+              <input
+                type="email"
+                name="user_email"
+                placeholder="your@email.com"
+                required
+                className="w-full p-3 rounded-lg bg-[#0a0f1a] text-heading border border-gray-600 focus:outline-none focus:ring-2 focus:ring-accent placeholder-gray-600"
+              />
+            </div>
+            <div>
+              <label className="text-body text-sm font-medium block mb-2">Name</label>
+              <input
+                type="text"
+                name="user_name"
+                placeholder="Your Name"
+                required
+                className="w-full p-3 rounded-lg bg-[#0a0f1a] text-heading border border-gray-600 focus:outline-none focus:ring-2 focus:ring-accent placeholder-gray-600"
+              />
+            </div>
+            <div>
+              <label className="text-body text-sm font-medium block mb-2">Subject</label>
+              <input
+                type="text"
+                name="subject"
+                placeholder="Project Discussion"
+                required
+                className="w-full p-3 rounded-lg bg-[#0a0f1a] text-heading border border-gray-600 focus:outline-none focus:ring-2 focus:ring-accent placeholder-gray-600"
+              />
+            </div>
+            <div>
+              <label className="text-body text-sm font-medium block mb-2">Message</label>
+              <textarea
+                name="message"
+                placeholder="Share your thoughts or opportunity..."
+                rows="4"
+                className="w-full p-3 rounded-lg bg-[#0a0f1a] text-heading border border-gray-600 focus:outline-none focus:ring-2 focus:ring-accent placeholder-gray-600 resize-none"
+              ></textarea>
+            </div>
 
             {/* send button */}
             <button
               type="submit"
-              className="w-full bg-gradient-to-r from-purple-600 to-pink-500 py-3 text-white font-semibold rounded-md hover:opacity-90 transition"
+              className="w-full py-3 mt-6 font-semibold rounded-lg text-black hover:scale-105 transition shadow-lg"
+              style={{
+                background: 'linear-gradient(90deg, #00f0ff, #2EA6FF)',
+                boxShadow: '0 0 20px rgba(46,166,255,0.3)'
+              }}
             >
-              Send
+              Send Message
             </button>
           </form>
         </div>
