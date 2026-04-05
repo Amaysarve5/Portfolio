@@ -2,6 +2,7 @@
 import htmlLogo from './assets/tech_logo/html.png';
 import cssLogo from './assets/tech_logo/css.png';
 import javascriptLogo from './assets/tech_logo/javascript.png';
+import typescriptLogo from './assets/tech_logo/typescript.png';
 import reactjsLogo from './assets/tech_logo/reactjs.png';
 import reduxLogo from './assets/tech_logo/redux.png';
 import nextjsLogo from './assets/tech_logo/nextjs.png';
@@ -46,6 +47,7 @@ export const SkillsInfo = [
       { name: 'JavaScript', logo: javascriptLogo },
       { name: 'React JS', logo: reactjsLogo },
       { name: 'Tailwind CSS', logo: tailwindcssLogo },
+      { name: 'Redux', logo: reduxLogo },
     ],
   },
   {
@@ -63,6 +65,9 @@ export const SkillsInfo = [
       { name: 'C++', logo: cppLogo },
       { name: 'Python', logo: pythonLogo },
       { name: 'JavaScript', logo: javascriptLogo },
+      { name: 'HTML', logo: htmlLogo },
+      { name: 'CSS', logo: cssLogo },
+      { name: 'TypeScript', logo: typescriptLogo }
     ],
   },
   {
@@ -72,7 +77,9 @@ export const SkillsInfo = [
       { name: 'GitHub', logo: githubLogo },
       { name: 'VS Code', logo: vscodeLogo },
       { name: 'Postman', logo: postmanLogo },
+      { name: 'Figma', logo: figmaLogo },
       { name: 'Vercel', logo: vercelLogo },
+      { name: 'Netlify', logo: netlifyLogo }
     ],
   },
 ];
@@ -92,8 +99,8 @@ export const SkillsInfo = [
       img: sfsLogo,
       school: "S.F.S. High School & Junior College",
       date: "2023",
-      desc: "I completed my class 12 education from ,St. Francis De'Sales High School, Nagpur, under the HSC board, where I studied Physics, Chemistry,Mathematics and Biology ",
-      degree: "Senior Secondary (Science – PCMB)",
+      desc: "I completed my class 12 education from ,St. Francis De'Sales High School, Nagpur, under the HSC board, where I studied Physics, Chemistry and Mathematics",
+      degree: "Senior Secondary (Science – PCM)",
     },
     {
       id: 2,
@@ -108,9 +115,9 @@ export const SkillsInfo = [
   export const projects = [
     {
       id: 0,
-      title: "DeepFake AI Power-Detector",
+      title: "DeepFake Detection System",
       description:
-        "Developed an AI-powered deepfake detection web application that allows users to upload videos or share URLs for real-time authenticity analysis, leveraging a Python ML model trained on Kaggle datasets, with a secure full-stack architecture built using React, Tailwind CSS, Node.js, Express, and MongoDB.",
+        "Developed an AI based deepfake detection web application that allows users to upload videos or share URLs for real-time authenticity analysis, leveraging a Python ML model trained on Kaggle datasets, with a secure full-stack architecture built using React, Tailwind CSS, Node.js, Express, and MongoDB.",
       image: deepfake,
       tags: ["React JS", "Node.js", "Express","JavaScript","Tailwind Css","MongoDB","Python","Tensor Flow","Numpy"],
       github: "https://github.com/Amaysarve5/Deepfake-detector",
