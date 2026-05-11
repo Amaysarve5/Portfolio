@@ -185,19 +185,4 @@ export const SkillsInfo = [
     }
   ];  
 
-  export const experience =[
-    {
-      id: 0,
-      title: "Infinity Electrical Services",
-      website: "https://www.infinityelectricalsservices.com/",
-      headline: "Website Development - Client Project",
-      description: "Developed a professional website for electrical services company. Implemented responsive design for enhanced user experience across devices."
-    },
-    {
-      id: 1,
-      title: "GirlScript Summer of Code 2025",
-      website: "",
-      headline: "Open Source Contributor",
-      description: "Contributed to open-source projects by fixing bugs, adding features, and improving documentation. Collaborated with mentors and developers, enhancing coding, Git, and teamwork skills."
-    }
-  ]
+  
